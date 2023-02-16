@@ -1,0 +1,246 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="Meta Tracking System">
+    <meta name="keywords" content="Meta Tracking System">
+    <meta name="author" content="InESS Solutions, Inc.">
+    <title>Meta Tracking System</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'Meta-Icon-Logo-Small.png' %}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i%7CMuli:300,400,500,700" rel="stylesheet">
+    <!-- BEGIN VENDOR CSS-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/vendors.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'vendors/css/tables/datatable/datatables.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'vendors/css/forms/selects/selectize.default.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'vendors/css/tables/jsgrid/jsgrid-theme.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'vendors/css/tables/jsgrid/jsgrid.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'vendors/css/editors/summernote.css' %}">
+    <!-- END VENDOR CSS-->
+    <!-- BEGIN ROBUST CSS-->
+
+    <!-- END ROBUST CSS-->
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/core/menu/menu-types/horizontal-menu.min.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/core/colors/palette-gradient.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/plugins/calendars/clndr.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/core/colors/palette-climacon.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/core/colors/palette-callout.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/pages/users.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'admin/css/vendor/select2/select2.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'vendors/css/forms/selects/selectize.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'vendors/css/forms/selects/selectize.default.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/plugins/forms/selectize/selectize.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'vendors/css/tables/datatable/datatables.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/vendors.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/smackbar.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'vendors/css/forms/selects/select2.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/app.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/gradient.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'vendors/css/extensions/toastr.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/progressbar.css' %}">
+    <!-- END Page Level CSS-->
+    <!-- BEGIN Custom CSS-->
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"> -->
+    <!-- END Custom CSS-->
+</head>
+<style>
+    .multi-select {
+        width: 100%;
+    }
+</style>
+
+<body class="horizontal-layout horizontal-top-icon-menu 2-columns   menu-expanded" data-open="hover" data-menu="horizontal-menu" data-col="2-columns">
+
+    {% include "header.html" %} 
+    
+    
+    <!-- ////////////////////////////////////////////////////////////////////////////-->
+    <div class="app-content content">
+        <div class="content-wrapper">
+            <div class="content-header row">
+                {% block title %} {% endblock %}
+            </div>
+            <div class="content-body">
+                {% block content %} {% endblock %}
+            </div>
+        </div>
+    </div>
+    <!-- ////////////////////////////////////////////////////////////////////////////-->
+
+    <footer class="footer footer-static footer-light navbar-shadow" style="min-height: 2.5rem; max-height: 2.7rem;">
+        <!--fixed-bottom -->
+        <p class="clearfix text-muted text-sm-center mb-0 px-2">
+            <span class="float-md-left d-xs-block d-md-inline-block">Powered By 
+                <a href="http://inesssolutions.com" target="_blank" class="text-bold-800 grey darken-2"><img style="height: 20px;" class="img-fluid" alt="logo" src="{% static 'images/img_blue.png' %}"> InESS Solutions, Inc.</a></span>
+            <a href="http://inesssolutions.com" target="_blank" class="text-bold-800 grey darken-2"><span class="float-md-right d-xs-block d-md-inline-block">Version 1.0</span></a>
+        <a href="http://inesssolutions.com" target="_blank" class="text-bold-800 grey darken-2"></a>
+        </p>
+    </footer>
+
+
+
+
+    <!-- BEGIN VENDOR JS-->
+    <script src="{% static 'vendors/js/vendors.min.js' %}"></script>
+    
+
+    <!-- BEGIN PAGE VENDOR JS-->
+    <script src="{% static 'vendors/js/ui/jquery.sticky.js' %}"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="{% static 'vendors/js/extensions/toastr.min.js'%}"></script>
+    <script src="{% static 'vendors/js/tables/datatable/datatables.min.js' %}"></script>
+    <script src="{% static 'vendors/js/tables/datatable/dataTables.buttons.min.js' %}"></script>
+    <script src="{% static 'vendors/js/tables/datatable/dataTables.colVis.js' %}"></script>
+    <script src="{% static 'vendors/js/tables/datatable/dataTables.fixedHeader.min.js' %}"></script>
+    <script src="{% static 'vendors/js/charts/chart.min.js' %}"></script>
+    <script src="{% static 'vendors/js/extensions/listjs/list.min.js'%}"></script>
+    <script src="{% static 'vendors/js/extensions/listjs/list.fuzzysearch.min.js'%}"></script>
+    <script src="{% static 'vendors/js/extensions/listjs/list.pagination.min.js'%}"></script>
+    <script src="{% static 'vendors/js/extensions/sweetalert.min.js' %}"></script>
+    <script src="{% static 'vendors/js/forms/select/selectize.min.js' %}"></script>
+    <script src="{% static 'vendors/js/tables/jsgrid/jsgrid.min.js' %}"></script>
+    <script src="{% static 'vendors/js/forms/select/select2.full.min.js' %}"></script>
+    <script src="{% static 'vendors/js/editors/ckeditor/ckeditor.js' %}"></script>
+    <script src="{% static 'vendors/js/editors/summernote/summernote.js' %}"></script>
+    {% for msg in messages %}
+    <script>
+        toastr["{{ msg.tags }}"]("{{msg}}")
+    </script>
+
+
+    {% endfor %}
+    
+    {% block scripts %} {% endblock %}
+    <!-- BEGIN ROBUST JS-->
+    <script src="{% static 'js/core/app-menu.js' %}"></script>
+    <script src="{% static 'js/core/app.js' %}"></script>
+    <script>
+        function formatNumber(num) {
+            return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+        }
+        var currency = new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD',
+            minimumFractionDigits: 5
+
+        });
+        $(function() {
+
+            //Initialize Select2 Elements
+            $(".select2").select2();
+            // Basic Selectize with Select
+            $('.selectize-select').selectize({
+                create: true,
+                sortField: {
+                    field: 'text',
+                    direction: 'asc'
+                },
+                dropdownParent: 'body'
+            });
+            $(document).ready(function() {
+                $('[data-toggle="tooltip"]').tooltip();
+            });
+
+            // Multiple Selectize
+            //$('.selectize-multiple').selectize();
+
+            //Date picker
+            // $('.datepicker').datepicker({
+            // autoclose: true
+            // });
+            $('.auto-scroll').perfectScrollbar({
+                wheelPropagation: true
+            });
+            $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+            $($.fn.dataTable.tables(true)).DataTable()
+            .columns.adjust()
+            .responsive.recalc();
+            });
+        });
+
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('.selectize').selectize({
+                plugins: ['remove_button'],
+                persist: false,
+                create: true,
+                render: {
+                    item: function(data, escape) {
+                        return '<div>' + escape(data.text) + '</div>';
+                    }
+                },
+                /* onDelete: function(values) {
+                    return confirm(values.length > 1 ? 'Are you sure you want to remove these ' + values.length + ' items?' : 'Are you sure you want to remove "' + values[0] + '"?');
+                } */
+            });
+            $('.zero-configuration').DataTable({
+                "pageLength": 7,
+                "info": false,
+                "lengthChange": false
+            });
+            $('.base-style').DataTable();
+            $('.compact').DataTable();
+            //$('.select2').selectpicker();
+            $('.export_table').DataTable({
+                dom: 'Bfrtip',
+                lengthMenu: [
+                    [10, 25, 50, -1],
+                    ['10 rows', '25 rows', '50 rows', 'Show all']
+                ],
+                buttons: [{
+                        extend: 'excelHtml5',
+                        exportOptions: {
+                            columns: ':visible'
+                        }
+                    },
+                    'pageLength',
+                ],
+                orderCellsTop: true,
+                //fixedHeader: { headerOffset: $('.navbar').outerHeight() }
+            });
+            $('[data-toggle="tooltip"]').tooltip();
+            $('.block-page').on('click', function() {
+                $.blockUI({
+                    message: '<div class="semibold"><span class="ft-loader icon-spin text-left"></span>&nbsp;<br> Redirecting...</div>',
+                    timeout: 10000, //unblock after 2 seconds
+                    overlayCSS: {
+                        backgroundColor: '#FFFF',
+                        opacity: 0.8,
+                        cursor: 'wait'
+                    },
+                    css: {
+                        border: 0,
+                        padding: 0,
+                        backgroundColor: 'transparent'
+                    }
+                });
+            });
+            $.fn.dataTable.ext.errMode = (e, settings, techNote, message) => {
+
+                console.log('error',techNote)
+
+            }
+
+        });
+
+        function start_loader() {
+            var x = document.getElementById("loading_indicator");
+            x.style.display = "block";
+        }
+
+        function stop_loader() {
+            var x = document.getElementById("loading_indicator");
+            x.style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
